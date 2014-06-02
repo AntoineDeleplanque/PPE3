@@ -5,11 +5,14 @@ var fs = require('fs');
 
 var config = JSON.parse(fs.readFileSync('./mysql-config.json'));
 
-var client = new mysql.createConnection(config);
+function connection()
+{
+    var client = new mysql.createConnection(config);
 
-client.connect(function(err) {
-  // connected! (unless `err` is set)
-});
+    client.connect(function(err) {
+      // connected! (unless `err` is set)
+    });
+}
 
 function hasToClause(hash, separator)
 {
@@ -31,6 +34,7 @@ function insert(table, values, callback)
 	var clause = hasToClause(values, ', ');
 	q += clause.clause + ';';
 
+        var client = connection();
 	client.query(q, clause.values, callback);
 }
 
@@ -39,6 +43,7 @@ function remove(table, where, callback)
 	var q = 'DELETE FROM' + table + ' WHERE ';
 	var clause = hasToClause(where, ' AND ');
 	q += clause.clause;
+        var client = connection();
 	client.query(q, clause.values, callback); 
 }
 
@@ -52,6 +57,7 @@ function read(table, where, columns, callback)
 		var clause = hasToClause(where, ' AND ');
 		q += ' WHERE ' + clause.clause;
 	}
+        var client = connection();
 	client.query(q, (where ? clause.values : callback), callback);
 }
 
@@ -60,6 +66,7 @@ function update(table, where, values, callback)
 	var whereClause = hasToClause(where, ' AND ');
 	var valuesClause = hasToClause(values, ' AND ');
 	var q = 'UPDATE ' + table + ' SET ' + valuesClause.clause + ' WHERE ' + whereClause.clause + ';';
+        var client = connection();
 	client.query(q, whereClause.values.concat(valuesClause.values), callback);
 }
 
@@ -92,5 +99,6 @@ exports.findAll = function(table, callback)
 
 exports.query = function(query, values, callback)
 {
-	return client.query(query, values, callback);
+    var client = connection();
+    return client.query(query, values, callback);
 };

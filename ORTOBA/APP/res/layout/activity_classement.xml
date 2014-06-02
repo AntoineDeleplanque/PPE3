@@ -4,6 +4,10 @@
     android:layout_height="match_parent"
     tools:context="${packageName}.${activityClass}" >
     
+<ScrollView 
+    android:id="@+id/ScrollView01"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
     <RelativeLayout
         android:id="@+id/ClassmentRLayout"
         android:layout_width="wrap_content"
@@ -15,24 +19,15 @@
 
     >
 
-        <ScrollView
-            android:id="@+id/scrollView1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentTop="true" >
-        </ScrollView>
-
         <Button
             android:id="@+id/returnButton"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_toLeftOf="@+id/scrollView1"
-            android:text="retour" />
+            android:text="Retour" />
 
     </RelativeLayout>
+    </ScrollView>
 
 </RelativeLayout>

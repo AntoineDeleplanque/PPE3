@@ -63,7 +63,7 @@ public class WebService {
 	
 	/*** LA TU RECUPERES ET CONSTRUIS TON OBJET AVEC getNOMDELOBJET ***/
 	public List<equipe> getEquipe(){
-		String URL = "http://192.168.160.16/equipe/classement";
+		String URL = "http://nodewindow.cloudapp.net/equipe/classement";
 		// Url du json
 		
 		try {

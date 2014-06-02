@@ -60,7 +60,7 @@ CREATE TRIGGER `calcul_score` AFTER INSERT ON `matchs`
  FOR EACH ROW BEGIN
 DECLARE point_1, point_2 INT DEFAULT 2;
 DECLARE temp_1, temp_2 INT;
-DECLARE bonus INT DEFAULT 10;
+DECLARE bonus INT DEFAULT 1;
 DECLARE temp INT;
 
 IF (NEW.resultat_equipe_1 > NEW.resultat_equipe_2) THEN
