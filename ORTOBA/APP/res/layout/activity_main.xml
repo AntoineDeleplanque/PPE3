@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${packageName}.${activityClass}" >
+
+    <Button
+        android:id="@+id/ValiderButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/InscriptionButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="103dp"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/InscriptionButton"
+        android:layout_marginTop="59dp"
+        android:layout_toRightOf="@+id/ValiderButton"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/InscriptionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="100px"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:minHeight="100dp"
+        android:text="Inscription" />
+
+    <Button
+        android:id="@+id/MatchButton"
+        android:layout_width="wrap_content"
+        android:layout_height="100px"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/InscriptionButton"
+        android:minHeight="100dip"
+        android:text="Match" />
+
+    <Button
+        android:id="@+id/ClassementButton"
+        android:layout_width="wrap_content"
+        android:layout_height="100px"
+        android:layout_alignBottom="@+id/button3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/MatchButton"
+        android:minHeight="100dip"
+        android:text="Classement" />
+
+</RelativeLayout>

@@ -1,0 +1,68 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${packageName}.${activityClass}" >
+
+    <TextView
+        android:id="@+id/textViewrrr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="44dp"
+        android:layout_marginTop="28dp"
+        android:text="Nom"
+        android:textSize="@dimen/textCor" />
+
+    <EditText
+        android:id="@+id/NomTexte"
+        android:layout_width="250px"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewrrr"
+        android:layout_below="@+id/textViewrrr"
+        android:layout_marginTop="23dp" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/NomTexte"
+        android:layout_below="@+id/NomTexte"
+        android:layout_marginTop="23dp"
+        android:text="Ville"
+        android:textSize="@dimen/textCor" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="250px"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="27dp" />
+
+    <Button
+        android:id="@+id/ValiderButton"
+        android:layout_width="wrap_content"
+        android:layout_height="70px"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/editText2"
+        android:layout_marginTop="22dp"
+        android:minWidth="100dp"
+        android:text="Valider" />
+
+    <Button
+        android:id="@+id/RetourButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/ValiderButton"
+        android:text="Retour" />
+
+</RelativeLayout>

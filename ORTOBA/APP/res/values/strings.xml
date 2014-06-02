@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ORTOBA</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_inscription">Inscription</string>
+    <string name="title_activity_match">Match</string>
+    <string name="title_activity_classement">Classement</string>
+
+</resources>
